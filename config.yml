@@ -1,0 +1,89 @@
+title: "ModuVerse ZA"
+description: "Faceless, modular education for Grade 4–12, TVET, and Varsity learners across South Africa."
+baseurl: "" # e.g. /moduverse
+url: "https://moduverse.org" # or .xyz if preferred
+lang: "en-ZA"
+
+# Author & Branding
+author:
+  name: "ModuVerse ZA"
+  email: "hello@moduverse.org"
+  tagline: "Learn. Modular. Anywhere."
+  logo: "/assets/images/logo.png"
+  avatar: "/assets/images/avatar.png"
+
+# Theme & Layout
+theme: minima # or use a custom theme like 'jekyll-theme-clean-blog'
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-include-cache
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Modules"
+    url: "/modules/"
+  - title: "Subjects"
+    url: "/subjects/"
+  - title: "TVET & Varsity"
+    url: "/higher-ed/"
+  - title: "Notes"
+    url: "/notes/"
+  - title: "About"
+    url: "/about/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Collections
+collections:
+  modules:
+    output: true
+    permalink: /modules/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+  subjects:
+    output: true
+    permalink: /subjects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: "module"
+      author: "ModuVerse ZA"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+      author: "ModuVerse ZA"
+
+# Social
+social_links:
+  youtube: "https://youtube.com/@moduverseza"
+  tiktok: "https://tiktok.com/@moduverseza"
+  github: "https://github.com/moduverseza"
+  email: "hello@moduverse.org"
+
+# SEO & Analytics
+google_analytics: "G-XXXXXXXXXX"
+seo:
+  type: "EducationOrganization"
+  name: "ModuVerse ZA"
+  url: "https://moduverse.org"
+  logo: "/assets/images/logo.png"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+paginate: 6
+paginate_path: "/page:num/"
+permalink: pretty
